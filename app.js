@@ -1,8 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const User = require('./model/User');
-const Post = require('./model/Post');
-const Comment = require('./model/Comment');
+const User = require('./model/file/User');
+const Post = require('./model/file/Post');
+const Comment = require('./model/file/Comment');
 const app = express();
 const PORT = 3001;
 
