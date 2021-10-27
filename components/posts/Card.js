@@ -5,7 +5,7 @@ const PostCard = (props) => {
   const [liked, setLiked] = useState(false)
   const [count, setCount] = useState(0)
   return (
-    <div div className="item" >
+    <div className="item" >
       <h3>{post.title}</h3>
       <p>{post.body}</p>
       <div className="like" onClick={(e) => {

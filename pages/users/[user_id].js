@@ -26,14 +26,16 @@ const UserPage = () => {
     <div className="container">
       <div>
         {!!user && (
-          <div className="user">
+          <div className="item">
             <h3>{user.name}</h3>
             <p>{user.email}</p>
           </div>
         )}
-        <div className="items">
+        <div className="row">
           {posts.map((post) => {
-            return <PostCard post={post} link={`/posts/${post.id}`} key={post.id} />
+            return <div className="col-lg-3 col-md-4">
+              <PostCard post={post} link={`/posts/${post.id}`} key={post.id} />
+            </div>
           })}
         </div>
       </div>
