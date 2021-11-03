@@ -7,6 +7,7 @@ const CompanySchema = new Schema({
   catchPhrase: String,
   bs: String
 });
+
 const AddressSchema = new Schema({
   street: String,
   suite: String,

@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import PostCard from "../../components/posts/Card";
+//const API_URL = "/api";
 const API_URL = "http://localhost:3001";
+
 
 const UserPage = () => {
   const [user, setUser] = useState(null);
@@ -21,7 +23,6 @@ const UserPage = () => {
         setPosts(data.items);
       });
   }, [user_id])
-  console.log(user_id, user);
   return (
     <div className="container">
       <div>
@@ -31,13 +32,13 @@ const UserPage = () => {
             <p>{user.email}</p>
           </div>
         )}
-        <div className="row">
-          {posts.map((post) => {
-            return <div className="col-lg-3 col-md-4">
-              <PostCard post={post} link={`/posts/${post.id}`} key={post.id} />
-            </div>
-          })}
-        </div>
+      </div>
+      <div className="row">
+        {posts.map((post) => {
+          return <div className="col-md-4 col-lg-3">
+            <PostCard post={post} link={`/posts/${post.id}`} key={post.id} />
+          </div>
+        })}
       </div>
     </div>
   )
